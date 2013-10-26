@@ -1,22 +1,16 @@
 package info.vividcode.web.app.jerseysample;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-
-import info.vividcode.web.app.jerseysample.controllers.Root;
+import org.glassfish.jersey.server.ResourceConfig;
 
 @ApplicationPath("/")
-public class MyApplication extends Application {
+public class MyApplication extends ResourceConfig {
 
-    private static final Set<Class<?>> CLASSES =
-            new HashSet<Class<?>>(Arrays.asList(Root.class));
+    private static final String CONTROLLERS_PACKAGE_PREFIX = ".controllers";
 
-    @Override
-    public Set<Class<?>> getClasses() {
-        return CLASSES;
+    public MyApplication() {
+        // Add a package used to scan for components.
+        packages(this.getClass().getPackage().getName() + CONTROLLERS_PACKAGE_PREFIX);
     }
 
 }

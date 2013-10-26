@@ -12,4 +12,5 @@ repositories {
 
 dependencies {
     providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0'
+    compile 'org.glassfish.jersey.core:jersey-server:2.4'
 }
