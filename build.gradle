@@ -1,0 +1,15 @@
+// war plugin
+// See: http://www.gradle.org/docs/current/userguide/war_plugin.html
+apply plugin: 'war'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0'
+}
