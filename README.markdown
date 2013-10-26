@@ -19,3 +19,9 @@ This project is based on:
 ```
 ./gradlew --daemon war
 ```
+
+### Running tests
+
+```
+./gradlew --daemon test
+```
