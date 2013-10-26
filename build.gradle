@@ -2,6 +2,14 @@
 // See: http://www.gradle.org/docs/current/userguide/war_plugin.html
 apply plugin: 'war'
 
+// jetty plugin
+// See: http://www.gradle.org/docs/current/userguide/jetty_plugin.html
+apply plugin: 'jetty'
+jettyRun {
+    reload = "automatic"
+    scanIntervalSeconds = 1
+}
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }

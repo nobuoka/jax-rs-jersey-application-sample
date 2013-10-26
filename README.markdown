@@ -8,6 +8,10 @@ This project is based on:
   * [Jersey](https://jersey.java.net/) — JAX-RS implementation
 * [Gradle](http://www.gradle.org/) — Build Automation tool
 
+On this project, an application server used in a development cycle is:
+
+* [Jetty](http://www.eclipse.org/jetty/) — Servlet engine and HTTP server
+
 ## Building and running
 
 ### Prerequisites
@@ -18,6 +22,12 @@ This project is based on:
 
 ```
 ./gradlew --daemon war
+```
+
+### Running on Jetty for development
+
+```
+./gradlew --daemon jettyRun
 ```
 
 ### Running tests
