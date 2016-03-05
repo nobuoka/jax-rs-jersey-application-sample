@@ -19,10 +19,10 @@ repositories {
 }
 
 dependencies {
-    providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0'
-    compile 'org.glassfish.jersey.core:jersey-server:2.4'
+    providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+    compile 'org.glassfish.jersey.core:jersey-server:2.22.2'
     // Jersey core Servlet 3.x implementation
-    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.4'
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
     // Jersey Test Framework — Grizzly2 container
-    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.4'
+    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.22.2'
 }
