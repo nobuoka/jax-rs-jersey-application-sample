@@ -1,14 +1,31 @@
+import java.nio.file.Paths
+
+buildscript {
+    ext.kotlin_version = '1.0.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+plugins {
+    id 'org.akhikhl.gretty' version '1.2.4'
+}
+
 // war plugin
 // See: http://www.gradle.org/docs/current/userguide/war_plugin.html
 apply plugin: 'war'
 
+apply plugin: "kotlin"
+
 // jetty plugin
 // See: http://www.gradle.org/docs/current/userguide/jetty_plugin.html
-apply plugin: 'jetty'
+/*apply plugin: 'jetty'
 jettyRun {
-    reload = "automatic"
+    reload = 'automatic'
     scanIntervalSeconds = 1
-}
+}*/
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -18,11 +35,58 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    server
+}
+
 dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    providedCompile 'javax:javaee-api:7.0'
     providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0'
-    compile 'org.glassfish.jersey.core:jersey-server:2.4'
+    compile 'org.glassfish.jersey.core:jersey-server:2.22.2'
     // Jersey core Servlet 3.x implementation
-    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.4'
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
+
+    compile 'org.glassfish.ozark:ozark:1.0.0-m02'
+
     // Jersey Test Framework — Grizzly2 container
-    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.4'
+    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.22.2'
+
+    server 'fish.payara.extras:payara-micro:4.1.1.154'
+    //server 'org.eclipse.jetty:jetty-server:9.3.7.v20160115'
+}
+
+task payaraRun(type: Exec, dependsOn: war) {
+    def payaraJar = configurations.server.first()
+    def warFile = war.archivePath
+    commandLine 'java', '-jar', "$payaraJar", '--noCluster', '--deploy', "$warFile"
+}
+
+task myJettyDownload << {
+    String ver = '9.3.7.v20160115'
+    String url = "http://download.eclipse.org/jetty/${ver}/dist/jetty-distribution-${ver}.zip"
+    String dir = '.jetty'
+    mkdir(dir)
+    Paths.get(dir, "${ver}.zip").toFile().withOutputStream { out ->
+        new URL(url).withInputStream { from -> out << from }
+    }
+}
+
+task myJettyUnZip(type: Copy) {
+    from zipTree('.jetty/9.3.7.v20160115.zip')
+    into '.jetty/9.3.7'
+}
+
+task myJettyRun(type: Exec) {
+    commandLine 'java', '-jar', '.jetty/9.3.7/start.jar', '--module=cdi',
+            '--create-files', '--approve-all-licenses',
+            'jetty.home=.jetty/9.3.7',
+            'jetty.base=.jetty/9.3.7'
+}
+
+gretty {
+    // supported values:
+    // 'jetty7', 'jetty8', 'jetty9', 'tomcat7', 'tomcat8'
+    servletContainer = 'jetty9'
 }
