@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile 'fish.payara.extras:payara-micro:4.1.1.161.1'
+
+    compile 'javax:javaee-api:7.0'
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
+    compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+    compile 'javax.mvc:javax.mvc-api:1.0-edr2'
+    compile 'org.glassfish.ozark:ozark:1.0.0-m02'
+
+    compile 'org.eclipse.jetty:jetty-webapp:9.3.+'
+    compile 'org.eclipse.jetty:jetty-annotations:9.3.+'
+    // See : https://gist.github.com/zach-m/abcf8ef96c04c5bd3f7a
+    compile 'org.glassfish.jersey.containers.glassfish:jersey-gf-cdi:2.22.2'
+    compile 'org.glassfish.jersey.containers.glassfish:jersey-gf-cdi-ban-custom-hk2-binding:2.22.2'
+    compile 'org.jboss.weld.servlet:weld-servlet-core:2.3.3.Final'
+
+    compile 'org.glassfish.jersey.core:jersey-server:2.22.2'
+    // Jersey core Servlet 3.x implementation
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
+}
