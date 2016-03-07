@@ -10,15 +10,23 @@ import javax.ws.rs.core.Response;
 /**
  * Root resource, which represents “Hello world!”.
  */
-//@RequestScoped
+@RequestScoped
 //@Controller
 @Path("/")
 public class Root {
-
+    @Controller
     @GET
     @Produces("text/plain")
     public Response getText() {
         return Response.ok("Hello world!").build();
+    }
+
+    @Controller
+    @Path("good")
+    @GET
+    @Produces("text/plain")
+    public String getGood() {
+        return "root.jsp";
     }
 
 }

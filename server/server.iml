@@ -35,23 +35,8 @@
     <orderEntry type="library" name="Gradle: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Gradle: javax.mvc:javax.mvc-api:1.0-edr2" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld.servlet:weld-servlet-core:2.3.3.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld.environment:weld-environment-common:2.3.3.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-spi:2.3.SP1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld.probe:weld-probe-core:2.3.3.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.el:jboss-el-api_3.0_spec:1.0.0.Alpha1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging:3.2.1.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-core-impl:2.3.3.Final" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
-    <orderEntry type="library" name="Gradle: javax.enterprise:cdi-api:1.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-api:2.3.SP1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.classfilewriter:jboss-classfilewriter:1.1.2.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.guava:guava:18.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec:1.0.0.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.glassfish.ozark:ozark:1.0.0-m02" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.core:jersey-server:2.22.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.22.2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.core:jersey-common:2.22.2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.core:jersey-client:2.22.2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.22.2" level="project" />
@@ -59,11 +44,35 @@
     <orderEntry type="library" name="Gradle: org.glassfish.hk2.external:javax.inject:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2:hk2-locator:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Gradle: javax.validation:validation-api:1.1.0.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.22.2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.22.2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2:hk2-utils:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Gradle: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.22.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.22.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.ozark:ozark:1.0.0-m02" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld.servlet:weld-servlet-core:2.3.3.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld.environment:weld-environment-common:2.3.3.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-spi:2.3.SP1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld.probe:weld-probe-core:2.3.3.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.el:jboss-el-api_3.0_spec:1.0.0.Alpha1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging:3.2.1.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-core-impl:2.3.3.Final" level="project" />
+    <orderEntry type="library" name="Gradle: javax.enterprise:cdi-api:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.weld:weld-api:2.3.SP1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.classfilewriter:jboss-classfilewriter:1.1.2.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.ext.cdi:jersey-cdi1x-servlet:2.22.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.ext.cdi:jersey-cdi1x:2.22.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty:apache-jsp:9.3.8.RC0" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty.toolchain:jetty-schemas:3.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.mortbay.jasper:apache-jsp:8.0.27" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jdt.core.compiler:ecj:4.4.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.mortbay.jasper:apache-el:8.0.27" level="project" />
+    <orderEntry type="library" name="Gradle: javax.servlet.jsp:jsp-api:2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.ext.cdi:jersey-cdi1x-ban-custom-hk2-binding:2.22.2" level="project" />
   </component>
 </module>
