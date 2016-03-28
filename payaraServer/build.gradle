@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'fish.payara.extras:payara-micro:4.1.1.161.1'
+    compile 'javax.mvc:javax.mvc-api:1.0-edr2'
+    //compile 'org.glassfish.ozark:ozark:1.0.0-m02'
+}

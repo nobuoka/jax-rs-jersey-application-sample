@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 //@Controller
 @Path("/")
 public class Root {
-    @Controller
+    //@Controller
     @GET
     @Produces("text/plain")
     public Response getText() {
@@ -24,7 +24,7 @@ public class Root {
     @Controller
     @Path("good")
     @GET
-    @Produces("text/plain")
+    @Produces("text/html")
     public String getGood() {
         return "root.jsp";
     }

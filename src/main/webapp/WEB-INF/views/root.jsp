@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>����ɂ��́AKotlin�I</title>
+  <title>こんにちは！ Kotlin！</title>
 </head>
 <body>
 <section>
