@@ -1,4 +1,4 @@
-package info.vividcode.web.app.jerseysample.controllers;
+package info.vividcode.web.app.jerseysample.presentation;
 
 import javax.ws.rs.core.Application;
 import org.glassfish.jersey.server.ResourceConfig;

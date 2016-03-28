@@ -1,4 +1,4 @@
-package info.vividcode.web.app.jerseysample.controllers;
+package info.vividcode.web.app.jerseysample.presentation;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,7 +14,7 @@ public class Root {
     @GET
     @Produces("text/plain")
     public Response getText() {
-        return Response.ok("Hello world!").build();
+        return Response.ok("Hello world! Good luck!").build();
     }
 
 }
