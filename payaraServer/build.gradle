@@ -10,8 +10,4 @@ repositories {
 
 dependencies {
     compile 'fish.payara.extras:payara-micro:4.1.1.161.1'
-
-    compile 'org.eclipse.jetty:jetty-server:9.3.7.v20160115'
-    compile 'org.eclipse.jetty:jetty-jmx:9.3.7.v20160115'
-    compile 'org.eclipse.jetty:jetty-webapp:9.3.7.v20160115'
 }
